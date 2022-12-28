@@ -1,0 +1,23 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<header>
+		<a><img src="./images/logo.png"   ></a>
+	</header>
+	<nav>
+		<ul>
+			<li a href="list">메뉴 보기</li>
+			<li a href="order">주문 하기</li>
+			<li a href="check">배달 순서 확인</li>
+			<li a href="home">홈으로</li>
+		</ul>
+	</nav>
+</body>
+<link href="style.css" rel="stylesheet" type="text/css">
+</html>

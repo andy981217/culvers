@@ -1,0 +1,42 @@
+package DTO;
+
+public class Delivery {
+	int order_no;
+	int custno;
+	String menu;
+	String address;
+	String req;
+	
+	public int getOrder_no() {
+		return order_no;
+	}
+	public void setOrder_no(int order_no) {
+		this.order_no = order_no;
+	}
+	public int getCustno() {
+		return custno;
+	}
+	public void setCustno(int custno) {
+		this.custno = custno;
+	}
+	public String getMenu() {
+		return menu;
+	}
+	public void setMenu(String menu) {
+		this.menu = menu;
+	}
+	public String getAddress() {
+		return address;
+	}
+	public void setAddress(String address) {
+		this.address = address;
+	}
+	public String getRequest() {
+		return req;
+	}
+	public void setRequest(String req) {
+		this.req = req;
+	}
+	
+	
+}

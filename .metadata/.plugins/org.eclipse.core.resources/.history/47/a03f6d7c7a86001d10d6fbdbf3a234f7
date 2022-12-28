@@ -1,0 +1,49 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+    <%
+request.setCharacterEncoding("UTF-8");
+%>
+<%
+request.setCharacterEncoding("UTF-8");
+int order_no = 0;
+order_no = (Integer) request.getAttribute("order_no");
+%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>\
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+	<%@ include file="topmenu.jsp" %>
+		<section>
+			<div class="title">주문하기</div>
+			<form name="frm" action="orderMenu">
+				<div name="wrapper">
+					<table>
+						<tr>
+							<th>주문번호</th>
+							<td><input type="text" name="order_no" value="<%=order_no%>" readonly></td>
+						</tr>
+						<tr>
+							<th>메뉴1</th>
+							<td><select name="menu">
+								<option></option>
+								<option value="1">햄버거1</option>
+								<option value="2">햄버거2</option>
+								<option value="3">감튀1</option>
+								<option value="4">감튀2</option>
+								<option value="5">콜라</option>
+								<option value="6">사이다</option>
+								<option value="7">쉐이크1</option>
+								<option value="8">쉐이크2</option>
+							</select></td>
+						</tr>
+					</table>
+				</div>
+			</form>
+		</section>
+	<%@ include file="footer.jsp" %>
+</body>
+</html>

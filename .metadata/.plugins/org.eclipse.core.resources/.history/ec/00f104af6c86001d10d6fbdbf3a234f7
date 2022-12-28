@@ -1,0 +1,121 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+    <%@ page import="java.util.*" %>
+    <%@ page import="DTO.MenuList" %>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link href="style.css" rel="stylesheet">
+</head>
+<body>
+	<%@ include file = "topmenu.jsp"%>
+	<section class="introduce_characters">
+                <div class="featured_characters_title">
+                    <h1>CHARACTERS</h1>
+                </div>
+                <!--  영역 만들기 -->
+                <div class="featured_characters_image">
+                    <div class="border">
+                        <div class="featured_characters_movie_title">
+                            <h2>Doctor Strange in the Multiverse of Madness</h2>
+                        </div>                
+                    </div>
+                    <ul class="featured_characters_sixhero">
+                        <li>
+                            <a href=""><img src="../img/characters1.png"   alt="doctor_strange"></a>
+                            <div class="info">
+                                <h3>DOCTOR STRANGE</h3>
+                                <P>STEPHEN STRANGE</P>
+                            </div>
+                        </li>
+                        <li>
+                            <a href=""><img src="../img/characters2.png"  alt="wanda"></a>
+                            <div class="info">
+                                <h3>WANDA MAXIMOFF</h3>
+                                <P></P>
+                            </div>
+                        </li>
+                        <li>
+                            <a href=""><img src="../img/characters3.png"  alt="wang"></a>
+                            <div class="info">
+                                <h3>WONG</h3>
+                                <P>SORCERER SUPREME</P>
+                            </div>
+                        </li>
+                        <li>
+                            <a href=""><img src="../img/characters4.png"  alt="americachavez"></a>
+                            <div class="info">
+                                <h3>AMERICA CHAVEZ</h3>
+                                <P></P>
+                            </div>
+                        </li>
+                        <li>
+                            <a href=""><img src="../img/characters5.png"  alt="baronmordo"></a>
+                            <div class="info">
+                                <h3>BARON MORDO</h3>
+                                <P></P>
+                            </div>
+                        </li>
+                        <li>
+                            <a href=""><img src="../img/characters6.png"   alt="christinepalmer"></a>                
+                            <div class="info">
+                                <h3>CHRISTINE PALMER</h3>
+                                <P></P>
+                            </div>
+                        </li>
+                    </ul>
+                    <div class="border">
+                        <div class="featured_characters_movie_title">
+                            <h2>AVENGERS:ENDGAME</h2>
+                        </div>
+                    </div>
+                    <ul class="featured_characters_sixhero">
+                        <li>
+                            <a href=""><img src="../img/characters7.png"   alt="captainamerica"></a>
+                            <div class="info">
+                                    <h3>CAPTAIN AMERICA</h3>
+                                    <P>STEVE ROGERS</P>
+                            </div>
+                        </li>
+                        <li>
+                            <a href=""><img src="../img/characters8.png"  alt="thanos"></a>
+                            <div class="info">
+                                <h3>THANOS</h3>
+                                <P></P>
+                            </div>
+                        </li>
+                        <li>
+                            <a href=""><img src="../img/characters9.png"  alt="ironman2"></a>
+                            <div class="info">
+                                <h3>IRONMAN</h3>
+                                <P>TONY STARK</P>
+                            </div>
+                        </li>
+                        <li>
+                            <a href=""><img src="../img/characters10.png"  alt="thor"></a>
+                            <div class="info">
+                                <h3>THOR</h3>
+                                <P>GOD OF THUNDER</P>
+                            </div>
+                        </li>
+                        <li>
+                            <a href=""><img src="../img/characters11.png"  alt="blackwidow"></a>
+                            <div class="info">
+                                <h3>BLACK WIDOW</h3>
+                                <P>NATALIA ROMANOVA</P>
+                            </div>
+                        </li>
+                        <li>
+                            <a href=""><img src="../img/characters12.png"   alt="starllord"></a>                
+                            <div class="info">
+                                <h3>STAR-LORD</h3>
+                                <P>PETER QUILL</P>
+                            </div>
+                        </li>
+                    </ul>    
+                </div>
+            </section>
+</body>
+</html>

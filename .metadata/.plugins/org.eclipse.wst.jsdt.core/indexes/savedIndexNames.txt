@@ -1,0 +1,8 @@
+INDEX VERSION 1.4+C:\Users\ezen\Desktop\Culvers\.metadata\.plugins\org.eclipse.wst.jsdt.core\indexes
+1325237035.index
+21432492.index
+3255903674.index
+3440230590.index
+3096802579.index
+167336715.index
+3240664387.index

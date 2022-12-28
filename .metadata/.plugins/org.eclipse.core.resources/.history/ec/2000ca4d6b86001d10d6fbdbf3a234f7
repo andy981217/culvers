@@ -1,0 +1,26 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+    <%@ page import="java.util.*" %>
+    <%@ page import="DTO.MenuList" %>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link href="style.css" rel="stylesheet">
+</head>
+<body>
+	<%@ include file = "topmenu.jsp"%>
+	<section>
+		<div class="title">어떤 메뉴가 있을까요~?</div>
+		<div class="wrapper">
+			<table style="width:900px">
+				<tr>
+					<th></th>
+				</tr>
+			</table>
+		</div>
+	</section>
+	
+</body>
+</html>
