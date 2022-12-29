@@ -21,19 +21,21 @@ list = (ArrayList<Delivery>) request.getAttribute("list");
 		<div class= "wrapper">
 			<table style="width:900px">
 				<tr>
-					<th>순서</th>
+					<th>배달순서 및 수정</th>
 					<th>회원번호</th>
 					<th>주소</th>
 					<th>요청사항</th>
+					<th>배달취소</th>
 				</tr>
  				<%
 				for (Delivery d : list){
 				%>
 				<tr>
-					<td><%=d.getOrder_no()%></td>
+					<td><a href="modify?order_no=<%=d.getOrder_no()%>"><%=d.getOrder_no()%></a></td>
 					<td><%=d.getCustno()%></td>
 					<td><%=d.getAddress()%></td>
 					<td><%=d.getReq() %></td>
+					<td><a href="delete?order_no=<%=d.getOrder_no()%>">Delete</a></td>
 				</tr>
 				<%
 				}

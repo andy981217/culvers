@@ -1,0 +1,103 @@
+package controller;
+
+import java.io.IOException;
+import java.io.PrintWriter;
+
+import javax.servlet.ServletException;
+import javax.servlet.annotation.WebServlet;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+import DAO.LoginDAO;
+
+@WebServlet("/")
+public class DeliveryController extends HttpServlet {
+	private static final long serialVersionUID = 1L;
+
+	public DeliveryController() {
+		super();
+	}
+
+	protected void doGet(HttpServletRequest request, HttpServletResponse response)
+			throws ServletException, IOException {
+		doPro(request, response);
+	}
+
+	protected void doPost(HttpServletRequest request, HttpServletResponse response)
+			throws ServletException, IOException {
+		request.setCharacterEncoding("UTF-8");
+		doPro(request, response);
+	}
+
+	protected void doPro(HttpServletRequest request, HttpServletResponse response)
+			throws ServletException, IOException {
+		request.setCharacterEncoding("UTF-8");
+		String context = request.getContentType();
+		String command = request.getServletPath();
+		String site = null;
+
+		LoginDAO login = new LoginDAO();
+
+		switch (command) {
+		case "/add":
+			site = login.nextCustno(request, response);
+			break;
+		case "/insertLog":
+			site = login.insertLog(request, response);
+			break;
+		case "/list":
+			site = "list.jsp";
+			break;
+		case "/order":
+			site = login.nextOrder(request,response);
+			break;
+		
+		 case "/orderMenu": 
+			 site = login.orderMenu(request, response); 
+			 break;
+		 case "/check":
+			 site = login.selectAll(request, response);
+			 break;
+		 case "/modify":
+			 site = login.modify(request,response);
+			 break;
+		 case "/update":
+			 int result1 = login.update(request, response);
+			 response.setContentType("text/html; charset=UTF-8");
+			 PrintWriter out = response.getWriter();
+			 
+			 if(result1 ==1) {
+				 out.println("<script>");
+				 out.print("alert('주문 수정이 완로 되었습니다.'); location.href='" + context + "';");
+				 out.println("</script>");	
+				 out.flush();
+			 }else {
+				 out.println("<script>");
+				 out.print("alert('수정실패!'); location.href='"+context+"';");
+				 out.println("</script>");
+				 out.flush();
+			 }
+			break;
+		 case "/delete":
+			 int result2 = login.delete(request, response);
+			 response.setContentType("text/html; charset=UTF-8");
+			 out = response.getWriter();
+			 if(result2 ==1) {
+				 out.println("<script>");
+				 out.print("alert('주문삭제가 되었습니다.'); location.href='" + context + "';");
+				 out.println("</script>");	
+				 out.flush();
+			 }else {
+				 out.println("<script>");
+				 out.print("alert('주문 삭제 실패!'); location.href='"+context+"';");
+				 out.println("</script>");
+				 out.flush();
+			 }
+			 break;
+			 }
+	
+		
+		getServletContext().getRequestDispatcher("/" + site).forward(request, response);
+	}
+}

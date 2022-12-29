@@ -25,68 +25,66 @@ order_no = (Integer) request.getAttribute("order_no");
 				<table>
 					<tr>
 						<th>주문번호</th>
-						<td><input type="text" name="order_no"  value="<%=order_no%>"
+						<td><input type="text" name="order_no" value="<%=order_no%>"
 							readonly></td>
 					</tr>
 					<tr>
 						<th>회원번호</th>
-						<td><input type="text" name="custno">
-						</td>
+						<td><input type="text" name="custno"></td>
 					</tr>
-					
 					<tr>
 						<th>메뉴1</th>
-						<td><select name="menu">
-								<option></option>
-								<option value="1">The Culvers Deluxe</option>
-								<option value="2">The Culvers Bacon Deluxe</option>
-								<option value="3">Sundaes</option>
-								<option value="4">Concrete mixer</option>
-								<option value="5">Crinkle Cut Fries</option>
-								<option value="6">Onion Rings</option>
-								<option value="7">Coke</option>
-								<option value="8">Sprite</option>
+						<td><select name="menu1">
+								<option value="">메뉴를 선택해주세요.</option>
+								<option value="The Culvers Deluxe">The Culvers Deluxe</option>
+								<option value="The Culvers Bacon Deluxe">The Culvers Bacon Deluxe</option>
+								<option value="Sundaes">Sundaes</option>
+								<option value="Concrete Mixer">Concrete Mixer</option>
+								<option value="Crinkle Cut Fries">Crinkle Cut Fries</option>
+								<option value="Onion Rings">Onion Rings</option>
+								<option value="Coke">Coke</option>
+								<option value="Sprite">Sprite</option>
 						</select></td>
 					</tr>
 					<tr>
 						<th>메뉴2</th>
-						<td><select name="menu">
-								<option></option>
-								<option value="1">The Culvers Deluxe</option>
-								<option value="2">The Culvers Bacon Deluxe</option>
-								<option value="3">Sundaes</option>
-								<option value="4">Concrete mixer</option>
-								<option value="5">Crinkle Cut Fries</option>
-								<option value="6">Onion Rings</option>
-								<option value="7">Coke</option>
-								<option value="8">Sprite</option>
+						<td><select name="menu2">
+								<option value="nochoice">선택안함</option>
+								<option value="The Culvers Deluxe">The Culvers Deluxe</option>
+								<option value="The Culvers Bacon Deluxe">The Culvers Bacon Deluxe</option>
+								<option value="Sundaes">Sundaes</option>
+								<option value="Concrete Mixer">Concrete Mixer</option>
+								<option value="Crinkle Cut Fries">Crinkle Cut Fries</option>
+								<option value="Onion Rings">Onion Rings</option>
+								<option value="Coke">Coke</option>
+								<option value="Sprite">Sprite</option>
 						</select></td>
 					</tr>
 					<tr>
 						<th>메뉴3</th>
-						<td><select name="menu">
-								<option></option>
-								<option value="1">The Culvers Deluxe</option>
-								<option value="2">The Culvers Bacon Deluxe</option>
-								<option value="3">Sundaes</option>
-								<option value="4">Concrete mixer</option>
-								<option value="5">Crinkle Cut Fries</option>
-								<option value="6">Onion Rings</option>
-								<option value="7">Coke</option>
-								<option value="8">Sprite</option>
+						<td><select name="menu3">
+								<option value="nochoice">선택안함</option>
+								<option value="The Culvers Deluxe">The Culvers Deluxe</option>
+								<option value="The Culvers Bacon Deluxe">The Culvers Bacon Deluxe</option>
+								<option value="Sundaes">Sundaes</option>
+								<option value="Concrete Mixer">Concrete Mixer</option>
+								<option value="Crinkle Cut Fries">Crinkle Cut Fries</option>
+								<option value="Onion Rings">Onion Rings</option>
+								<option value="Coke">Coke</option>
+								<option value="Sprite">Sprite</option>
 						</select></td>
 					</tr>
 					<tr>
-						<th>특이사항</th>
-						<td><input type="text" name="require"></td>
+						<th>주소</th>
+						<td><input type="text" name="address"></td>
 					</tr>
 					<tr>
-						<th>주소</th>
-						<td><input type="text" name="address"></td>	
+						<th>특이사항</th>
+						<td><input type="text" name="req"></td>
 					</tr>
 					<tr>
 						<td colspan="2">
-						<button class="btn" type="submit" onclick="">배달 접수</button>
+							<button class="btn" type="submit">배달 접수</button>
 						</td>
 					</tr>
 				</table>

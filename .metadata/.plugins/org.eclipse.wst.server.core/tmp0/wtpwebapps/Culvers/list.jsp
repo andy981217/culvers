@@ -1,7 +1,9 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
 <%@ page import="java.util.*"%>
-<%@ page import="DTO.MenuList"%>
+<%@ page import="DTO.Menulist1"%>
+<%@ page import="DTO.Menulist2"%>
+<%@ page import="DTO.Menulist3"%>
 <!DOCTYPE html>
 <html>
 <head>

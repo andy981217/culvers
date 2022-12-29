@@ -16,6 +16,7 @@
 			<li> <a href="list">메뉴 보기</a></li>
 			<li> <a href="order">주문 하기</a></li>
 			<li> <a href="check">배달 순서 확인</a></li>
+			<li> <a href="main">홈으로</a></li>
 		</ul>
 	</nav>
 </body>

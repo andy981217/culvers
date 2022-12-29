@@ -1,0 +1,7 @@
+package DTO;
+
+public class Menulist2 {
+	int menu_no;
+	String menu2;
+	int price;
+}

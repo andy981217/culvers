@@ -1,6 +1,8 @@
 package controller;
 
 import java.io.IOException;
+import java.io.PrintWriter;
+
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -57,9 +59,50 @@ public class DeliveryController extends HttpServlet {
 		 case "/check":
 			 site = login.selectAll(request, response);
 			 break;
-
-			
-		}
+		 case "/modify":
+			 site = login.modify(request,response);
+			 break;
+		 case "/main":
+			 site = "index.jsp";
+			 break;
+			 
+		 case "/update":
+			 int result1 = login.update(request, response);
+			 response.setContentType("text/html; charset=UTF-8");
+			 PrintWriter out = response.getWriter();
+			 
+			 if(result1 ==1) {
+				 out.println("<script>");
+				 out.print("alert('주문 수정이 완로 되었습니다.'); location.href='main';");
+				 out.println("</script>");	
+				 out.flush();
+			 }else {
+				 out.println("<script>");
+				 out.print("alert('수정실패!'); location.href='main';");
+				 out.println("</script>");
+				 out.flush();
+			 }
+			break;
+		 case "/delete":
+			 int result2 = login.delete(request, response);
+			 response.setContentType("text/html; charset=UTF-8");
+			 out = response.getWriter();
+			 if(result2 ==1) {
+				 out.println("<script>");
+				 out.print("alert('주문삭제가 되었습니다.'); location.href='main';");
+				 out.println("</script>");	
+				 out.flush();
+			 }else {
+				 out.println("<script>");
+				 out.print("alert('주문 삭제 실패!'); location.href='main';");
+				 out.println("</script>");
+				 out.flush();
+			 }
+			 break;
+			 }
+		
+	
+		
 		getServletContext().getRequestDispatcher("/" + site).forward(request, response);
 	}
 }
